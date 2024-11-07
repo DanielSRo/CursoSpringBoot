@@ -4,9 +4,9 @@ package cursoSpringBoot.domain;
 public class Product {
 
     /*Cuando se maneja framework no se aconseja manejar tipos de datos primitivos, sino referenciales
-    * esto, ya que de esta forma podremos manejar de manera correcta los valores nulos.
-    * Int -> Integer
-    * double -> Double */
+     * esto, ya que de esta forma podremos manejar de manera correcta los valores nulos.
+     * Int -> Integer
+     * double -> Double */
 
     //Atributos
     private Integer id;
@@ -14,6 +14,10 @@ public class Product {
     private Double price;
     private Integer stock;
 
+    //Constructor por defecto o vacío para que JSON puedo realizar la deserialización
+    public Product(){
+
+    }
     //Constructor
     public Product(Integer id, String name, Double price, Integer stock) {
         this.id = id;
